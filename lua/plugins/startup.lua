@@ -1,7 +1,14 @@
-return {  
-  "startup-nvim/startup.nvim",
-  dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", "nvim-telescope/telescope-file-browser.nvim" },
+return {
+  "goolord/alpha-nvim",
+  dependencies = {
+    'nvim-tree/nvim-web-devicons',
+    'echasnovski/mini.icons'
+  },
   config = function()
-    require "startup".setup()
-  end
+    local startify = require("alpha.themes.startify")
+    startify.file_icons.provider = "devicons"
+    require("alpha").setup(
+      startify.config
+    )
+  end,
 }

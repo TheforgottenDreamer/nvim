@@ -5,9 +5,9 @@ return {
     'echasnovski/mini.icons'
   },
   config = function()
-    local startify = require("alpha.themes.startify")
+    local startify = require('alpha.themes.startify')
     startify.file_icons.provider = "devicons"
-    require("alpha").setup(
+    require('alpha').setup(
       startify.config
     )
   end,

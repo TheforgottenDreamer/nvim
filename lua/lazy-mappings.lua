@@ -22,10 +22,22 @@ map('n', '<leader>ca', vim.lsp.buf.code_action, { silent = true })
 --Lazygit
 map('n', '<leader>lg', '<cmd>LazyGit<cr>', { silent = true })
 
---Tabs
-map('n', '<S-Tab>', '<Plug>(cokeline-focus-prev)', { silent = true })
-map('n', '<Leader><left>', '<Plug>(cokeline-focus-prev)', { silent = true })
-map('n', '<Tab>', '<Plug>(cokeline-focus-next)', { silent = true })
-map('n', '<Leader><right>', '<Plug>(cokeline-focus-next)', { silent = true })
-map('n', '<Leader>p', '<Plug>(cokeline-switch-prev)', { silent = true })
-map('n', '<Leader>n', '<Plug>(cokeline-switch-next)', { silent = true })
+--CMake 
+map('n', '<f6>', '<cmd>:CMakeRun<CR>', { silent = true })
+
+--None lsp
+map("n", "<leader>gf", vim.lsp.buf.format, {})
+
+-- dap
+map('n', '<Leader>dt', '<cmd>:DapToggleBreakpoint<CR>')
+map('n', '<Leader>dc', '<cmd>:DapContinue<CR>')
+map('n', '<Leader>dx', '<cmd>:DapTerminate<CR>')
+map('n', '<Leader>do', '<cmd>:DapStepOver<CR>')
+
+--tabs
+map('n', '<tab>','<cmd>:BufferLineCycleNext<CR>')
+map('n', '<Leader><right>', '<cmd>:BufferLineCycleNext<CR>')
+map('n', '<s-tab>', '<cmd>BufferLineCyclePrev<CR>')
+map('n', '<Leader><left>', '<cmd>:BufferLineCyclePrev<CR>')
+
+
